@@ -7,8 +7,6 @@ typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 
-#define endl '\n'
-
 int main(){
 	ios::sync_with_stdio(0);
 	
