@@ -10,6 +10,7 @@ typedef vector<int> vi;
 int main(){
 	ios::sync_with_stdio(0);
 	cin.tie();
+	cout.tie();
 	
 	return 0;
 }
