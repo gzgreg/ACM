@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{icpc_problem} % or wherever this package is stored
+
+\title{Problem A - Eugene and 2048}
+\author{your name here}
+\keywords{list of lower-case keywords separated by spaces}
+\comments{Any comments can go in here, so long as they can be fed as
+an argument to a LaTeX command.
+}
+\difficulty{2} % the difficulty should be a non-negative integer
+
+\begin{document}
+
+\begin{problemDescription}
+Eugene likes to play the game 2048! However, since this is an ACM problem, he of course has to play a simplified 1-dimensional version so that this problem is solvable. The game works as follows:
+
+1. The board begins with a row of $n$ empty squares. Eugene also chooses a value $p$.
+2. At the beginning of each turn, a number 2 (with probability $\frac{p}{1*10^6}$) or 4 (with probability $1 - \frac{p}{1*10^6}$) will appear on the rightmost square of the board.
+3. Eugene moves all numbers to the left, as far as possible. Two equal numbers (with the value $v$) that are next to each other will merge into a single number with the value $2*v$. This process continues until no more merges are possible.
+4. The game ends when the board has no more empty squares at the beginning of a turn.
+
+Of course Eugene wants to get as many points as possible, so he wants to know the expected total value of all the squares on the board at the end of the game.
+\end{problemDescription}
+
+\begin{inputDescription}
+The first line of the input will include the numbers $n$ and $p$ ($1 \leq n \leq 50000$, $0 \lt p \lt 1000000$ (non-inclusive)).
+\end{inputDescription}
+
+\begin{outputDescription}
+Print the expected sum of the values on the board at the end of the game. The answer will be considered correct if its absolute or relative error are less than $10^{-6}$.
+\end{outputDescription}
+
+\begin{sampleInput}
+2 500000
+\end{sampleInput}
+
+\begin{sampleOutput}
+7.875000
+\end{sampleOutput}
+
+\begin{sampleInput}
+100 1
+\end{sampleInput}
+
+\begin{sampleOutput}
+31172835.0464650691
+\end{sampleOutput}
+
+\end{document}
